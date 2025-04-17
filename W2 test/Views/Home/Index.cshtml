@@ -1,0 +1,14 @@
+﻿@model List<W2_test.Models.Blog>
+
+<h2>Danh sách Blog</h2>
+
+@foreach (var blog in Model)
+{
+    <div style="margin-bottom: 20px;">
+        <h3>@blog.Title</h3>
+        <p>@blog.CreatedAt.ToString("dd/MM/yyyy HH:mm")</p>
+        <p>
+            <a href="@Url.Action("Details", "Home", new { id = blog.Id })">Xem chi tiết</a>
+        </p>
+    </div>
+}

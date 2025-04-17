@@ -1,0 +1,6 @@
+﻿@model W2_test.Models.Blog
+
+<h2>@Model.Title</h2>
+<p><strong>Ngày tạo:</strong> @Model.CreatedAt.ToString("dd/MM/yyyy HH:mm")</p>
+<p>@Model.Content</p>
+<a href="@Url.Action("Index", "Home")">← Quay lại danh sách</a>

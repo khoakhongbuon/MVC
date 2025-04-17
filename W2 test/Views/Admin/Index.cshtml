@@ -1,0 +1,11 @@
+﻿@model List<W2_test.Models.Blog>
+<h2>Danh sách blog</h2>
+<a href="/Admin/Create">+ Thêm mới</a>
+@foreach (var blog in Model)
+{
+    <div>
+        <h3>@blog.Title</h3>
+        <a href="/Admin/Edit/@blog.Id">Sửa</a> |
+        <a href="/Admin/Delete/@blog.Id">Xóa</a>
+    </div>
+}
